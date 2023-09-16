@@ -28,3 +28,7 @@ body{
 .item{
     background-color: black;
 }
+
+.active{
+    background-color: red;
+}
