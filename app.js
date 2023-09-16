@@ -1,29 +1,22 @@
-const display = document.querySelector('.display');
+let rows = 16;
+let column = 16;
 
-let pixelQuantity;
-let rows;
-let columns;
-const quantity = document.querySelector('.quantity');
-quantity.addEventListener('click', () => {
-    pixelQuantity = prompt('Make a choice, but no more than 100');
-    rows = pixelQuantity;
-    columns = pixelQuantity;
-    console.log('1',pixelQuantity);
-    console.log(rows)
-    console.log(columns)
-    for (let i = 0; i < rows * columns; i++){
-        let divGrid = document.createElement('div');
-        divGrid.classList.add('item');
-        display.appendChild(divGrid);
-    } 
+const grid = document.querySelector('.display');
+for(let i = 0; i < rows*column; i++){
+    const gridDiv = document.createElement('div');
+    gridDiv.classList.add('item');
+    grid.appendChild(gridDiv);
+}
+
+const itemGrid = document.querySelectorAll('.item')
+itemGrid.forEach ((items) => {
+    items.addEventListener('mousedown', (event) =>{
+        const item = event.target 
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++){
+            color += letters[Math.floor(Math.random()*16)];
+        }
+        return color;
+    } )
 })
-
-// let rows = pixelQuantity;
-// let columns = pixelQuantity;
-
-
-for (let i = 0; i < rows * columns; i++){
-    let divGrid = document.createElement('div');
-    divGrid.classList.add('item');
-    display.appendChild(divGrid);
-} 
