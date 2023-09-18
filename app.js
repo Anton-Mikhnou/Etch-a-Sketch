@@ -9,10 +9,11 @@ for(let i = 0; i < rows*column; i++){
     gridDiv.classList.add('item');
     grid.appendChild(gridDiv);
 }
-
-grid.addEventListener('click', (event) => {
-    const itemElem = event.target;
-    itemElem.classList.add('active')
-    console.log(event.target)
+grid.addEventListener('click', () =>{
+    grid.addEventListener('mousemove', (event) => {
+        const target = event.target;
+        target.classList.add('active')
+    })
 })
+
 
