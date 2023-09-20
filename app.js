@@ -9,11 +9,29 @@ for(let i = 0; i < rows*column; i++){
     gridDiv.classList.add('item');
     grid.appendChild(gridDiv);
 }
-grid.addEventListener('click', () =>{
-    grid.addEventListener('mousemove', (event) => {
+
+let isDrawing = false;
+
+grid.addEventListener('mousedown', () => {
+    isDrawing = true;
+})
+
+grid.addEventListener("mousemove", (event) => {
+    if (isDrawing){
         const target = event.target;
         target.classList.add('active')
-    })
+        console.log(event.target)
+    }
 })
+
+grid.addEventListener('mouseup', () => {
+    isDrawing = false;
+})
+
+
+
+
+
+
 
 
