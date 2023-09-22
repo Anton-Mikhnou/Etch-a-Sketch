@@ -1,14 +1,29 @@
-let rows = 16;
-let column = 16;
-
 let gridDiv;
+let rows;
+let columns;
 
 const grid = document.querySelector('.display');
-for(let i = 0; i < rows*column; i++){
-    gridDiv = document.createElement('div');
-    gridDiv.classList.add('item');
-    grid.appendChild(gridDiv);
-}
+const quantity = document.querySelector('.quantity')
+quantity.addEventListener('click', () => {
+    let size = prompt('To make your choise');
+    rows = size;
+    columns = size;
+    if (rows && columns) {
+        display.innerHTML = '';
+        grid.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+        grid.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+        for(let i = 0; i < rows*columns; i++){
+            gridDiv = document.createElement('div');
+            gridDiv.classList.add('item');
+            grid.appendChild(gridDiv);
+        }
+    }
+})
+
+
+
+
+
 
 let isDrawing = false;
 
