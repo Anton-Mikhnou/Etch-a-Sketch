@@ -31,11 +31,9 @@ body{
     width: 720px;
     height: 720px;
 }
-
 .item{
     background-color: black;
 }
-
 .active{
     background-color: red;
 }

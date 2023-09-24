@@ -37,7 +37,6 @@ reset.addEventListener('click', () => {
     createGrid();
 })
 
-
 let isDrawing = false;
 
 grid.addEventListener('mousedown', () => {
@@ -45,12 +44,13 @@ grid.addEventListener('mousedown', () => {
 })
 
 grid.addEventListener("mousemove", (event) => {
-    if (isDrawing){
-        const target = event.target;
-        if(target.classList.contains('item')){
-            target.classList.add('active')
+        if (isDrawing){
+            const target = event.target;
+            if(target.classList.contains('item')){
+                const inputColor = document.getElementById('color');
+                target.style.backgroundColor = inputColor.value;
+            }
         }
-    }
 })
 
 grid.addEventListener('mouseup', () => {
