@@ -3,13 +3,23 @@
     padding: 0;
 }
 body{
-    background-color: rgb(150, 70, 50);
+    /* background-color: rgb(150, 70, 50); */
+    background-image: url(./imgs/back3.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
     padding: 30px;
+}
+.heading{
+    color: #fbc24f;
+    font-size: 40px;
+    font-family:cursive;
+    font-style: italic;
 }
 .home{
     display: flex;
@@ -30,10 +40,13 @@ body{
     background-color: white;
     width: 720px;
     height: 720px;
+    border-width: 10px;
+    border-left-color: black;
+    border-top-color: #f2a102;
+    border-right-color:#f2a102;
+    border-bottom-color: black;
+    border-style: ridge;
 }
 .item{
     background-color: black;
-}
-.active{
-    background-color: red;
 }
