@@ -1,15 +1,17 @@
 let gridDiv;
 let rows;
 let columns;
-
 const grid = document.querySelector('.display');
-const quantity = document.querySelector('.quantity')
-quantity.addEventListener('click', () => {
-    let size = prompt('To make your choise');
+
+function func1(){
+    let rng = document.getElementById('numberGrid');
+    let p = document.getElementById('gr');
+    let size = p.innerHTML = rng.value;
     rows = size;
     columns = size;
+    console.log(rows)
     if (rows && columns) {
-        display.innerHTML = '';
+        grid.innerHTML = '';
         grid.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
         grid.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
         for(let i = 0; i < rows*columns; i++){
@@ -18,11 +20,7 @@ quantity.addEventListener('click', () => {
             grid.appendChild(gridDiv);
         }
     }
-})
-
-
-
-
+}
 
 
 let isDrawing = false;
@@ -35,7 +33,6 @@ grid.addEventListener("mousemove", (event) => {
     if (isDrawing){
         const target = event.target;
         target.classList.add('active')
-        console.log(event.target)
     }
 })
 

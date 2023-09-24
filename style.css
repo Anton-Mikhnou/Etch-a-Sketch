@@ -11,6 +11,12 @@ body{
     gap: 40px;
     padding: 30px;
 }
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .bottons{
     display: flex;
     justify-content: center;
@@ -25,6 +31,7 @@ body{
     width: 720px;
     height: 720px;
 }
+
 .item{
     background-color: black;
 }
