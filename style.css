@@ -45,7 +45,10 @@ body{
     border-top-color: #f2a102;
     border-right-color:#f2a102;
     border-bottom-color: black;
-    border-style: ridge;
+    border-left-style: groove;
+    border-top-style: ridge;
+    border-right-style: groove;
+    border-bottom-style: ridge;
 }
 .item{
     background-color: black;
@@ -64,8 +67,6 @@ body{
     font-family: cursive;
 }
 
-input[type="range"]::-webkit-slider-thumb {
-    background-color: #f2a102;
-    width: 20px;
-    height: 20px;
+input[type="range"] {
+    accent-color: #f2a102;
 }
